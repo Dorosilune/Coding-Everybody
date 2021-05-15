@@ -4,13 +4,39 @@
   <title>위키피디아</title>
   <meta charset="utf-8">
   <style>
+    body {
+      margin: 0;
+    }
     a {
-      color:black;
+      color: black;
       text-decoration: none;
     }
     h1 {
       font-size: 45px;
       text-align: center;
+      border-bottom: 1px solid blue;
+      margin: 0;
+      padding: 20px;
+    }
+    h2 {
+      text-align: left;
+    }
+    .saw {
+      color: gray;
+    }
+    #grid ol {
+      border-right: 1px solid red;
+      width: 120px;
+      margin: 0;
+      padding: 33px;
+    }
+    #grid {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+    }
+    #article {
+      padding: 5px;
+      margin: 0;
     }
   </style>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -24,23 +50,21 @@
 </script>
 </head>
 <body>
-  <h1><a href="index.html">아리랑</a></h1>
+  <h1><a href="index.html" style="color:red; text-decoration:underline">아리랑</a></h1>
+  <div id="grid">
   <ol>
-    <li><a href="1.html">위키피디아</a></li>
-    <li><a href="2.html" style="color:red; text-decoration:underline">한국민족대백과</a></li>
-    <li><a href="3.html">문화콘텐츠닷컴</a></li>
+    <li><a href="1.html" class="saw">위키피디아</a></li>
+    <li><a href="2.html" class="saw">한국민족대백과</a></li>
+    <li><a href="3.html" class="saw">문화콘텐츠닷컴</a></li>
     </ol>
-  <ul>
-    <li>1. egoing</li>
-    <li>2. cat</li>
-    <li>3. dog</li>
-  </ul>
-    <p><strong>아리랑이란</strong></p>
+  <div id="article">
     <h2>아리랑이란</h2>
-      <p"><a href="https://ko.wikipedia.org/wiki/%EC%95%84%EB%A6%AC%EB%9E%91" target="_blank" title="아리랑의 유래">아리랑의 유래</a>는 삼국시대에 이미 형성되었다는 설, <br>대원군이 경복궁의 중건공사를 시작한 1870년 즈음 형성되었다는 설, <br>정확한 시기는 모르나 밀양의 영남루에 얽힌 아랑(阿女良)의 전설에서 유래하였다는 등 크게 세 가지 설로 나뉜다.</p>
+      <p><a href="https://ko.wikipedia.org/wiki/%EC%95%84%EB%A6%AC%EB%9E%91" target="_blank" title="아리랑의 유래">아리랑의 유래</a>는 삼국시대에 이미 형성되었다는 설, <br>대원군이 경복궁의 중건공사를 시작한 1870년 즈음 형성되었다는 설, <br>정확한 시기는 모르나 밀양의 영남루에 얽힌 아랑(阿女良)의 전설에서 유래하였다는 등 크게 세 가지 설로 나뉜다.</p>
         <br>
           <img src="Arirang.jpg" width="250">
-          <p>
+         <p>
+         </div>
+       </div>
             <div id="disqus_thread"></div>
             <script>
                 /**

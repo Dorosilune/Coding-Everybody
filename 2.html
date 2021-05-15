@@ -4,6 +4,9 @@
   <title>한국민족대백과</title>
   <meta charset="utf-8">
   <style>
+    body {
+      margin:0;
+    }
     a {
       color:black;
       text-decoration: none;
@@ -11,8 +14,31 @@
     h1 {
       font-size: 45px;
       text-align: center;
+      border-bottom:1px gray solid;
+      margin:0;
+      padding:20px;
     }
-  </style>
+    h2 {
+      text-align: left;
+    }
+    .saw {
+      color: gray;
+    }
+    #grid ol {
+      border-right:1px solid gray;
+      width:120px;
+      margin:0;
+      padding:33px;
+    } /*그리드를 부모로 둔 ol로 설정 - 이걸 없애서 본문에 항목이 필요한 경우 사용 가능*/
+    #grid {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+    }
+    #article {
+      padding: 5px;
+      margin: 0;
+    }
+    </style>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSH0RB0L5"></script>
 <script>
@@ -23,24 +49,23 @@
   gtag('config', 'G-PVSH0RB0L5');
 </script>
 </head>
-  <body>
+<body>
   <h1><a href="index.html">아리랑</a></h1>
+  <div id="grid">
   <ol>
-    <li><a href="1.html">위키피디아</a></li>
-    <li><a href="2.html">한국민족대백과</a></li>
-    <li><a href="3.html">문화콘텐츠닷컴</a></li>
+    <li><a href="1.html" class="saw">위키피디아</a></li>
+    <li><a href="2.html" class="saw">한국민족대백과</a></li>
+    <li><a href="3.html" class="saw">문화콘텐츠닷컴</a></li>
     </ol>
-  <ul>
-    <li>1. egoing</li>
-    <li>2. cat</li>
-    <li>3. dog</li>
-  </ul>
+<div id="article">
   <h2>한국민족문화대백과 아리랑</h2>
-      <p>구전으로 전승되고 재창조되어 온 한국의 전통 민요.
-     </p>
-      <img src="Arirang2.jpg" width="70%">
+      <p> 구전으로 전승되고 재창조되어 온 한국의 전통 민요.
+      </p>
+      <img src="Arirang2.jpg" width="40%">
         <br> 출처 : <a href="http://encykorea.aks.ac.kr/Contents/Item/E0034277" target="_blank" title="대백과사전">한국민족대백과사전</a>
-        <p>
+         <p>
+         </div>
+        </div>
           <div id="disqus_thread"></div>
           <script>
               /**
@@ -61,5 +86,5 @@
           </script>
           <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </p>
-  </body>
+         </body>
 </html>

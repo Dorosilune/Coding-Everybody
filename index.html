@@ -4,16 +4,57 @@
   <title>코딩 따라잡기 - 아리랑의 유래</title>
   <meta charset="utf-8">
   <style>
+    body {
+      margin: 0;
+      background-color: lightgreen;
+    }
     a {
       color: black;
       text-decoration: none;
     }
-    saw {
-      color:gray
+    #active {
+      color:red;
+    }
+    .saw {
+      color:gray;
     }
     h1 {
       font-size: 45px;
       text-align: center;
+      border-bottom: 1px solid black;
+      margin: 0;
+      padding: 20px;
+      padding-left: 38px;
+    }
+    #grid ol{
+      border-right: 1px solid red;
+      width: 120px;
+      margin: 0;
+      padding: 33px;
+    }
+    #grid {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      background-color: lightblue;
+    }
+    #article #grid {
+      margin: 0;
+      padding: 5px;
+    }
+    @media(max-width: 800px){
+      #grid, ol {
+        background-color: white;
+      }
+      #grid{
+        display: block;
+        padding: 10px;
+      }
+      #grid ol{
+        border-right: none;
+      }
+      h1{
+        border-bottom: none;
+      }
     }
   </style>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -28,11 +69,13 @@
 </head>
 <body>
   <h1><a href="index.html">아리랑</a></h1>
+  <!--이 메인 아리랑만 한 칸 앞인데 이유를 모르겠음-->
+  <div id="grid">
   <ol>
-    <li><a href="1.html" class="saw"> 위키피디아</a></li>
-    <li><a href="2.html" class="saw"> 한국민족대백과</a></li>
-    <li><a href="3.html">문화콘텐츠닷컴</a></li>
-  </ol>
+    <li><a href="1.html" class="saw">위키피디아</a></li>
+    <li><a href="2.html" class="saw" id="active">한국민족대백과</a></li>
+    <li><a href="3.html" class="saw">문화콘텐츠닷컴</a></li>
+    </ol>
   <!--
   <h1><a href="index.html"><font color="black">아리랑</font></a></h1>
   <ol>
@@ -41,15 +84,15 @@
     <li><a href="3.html"><font color="blue">문화콘텐츠닷컴</font></a></li>
   </ol>
   -->
-  <ul>
+<!--  <ul>
     <li><font color="red">1. egoing</font></li>
     <li><font color="red">2. cat</font></li>
     <li><font color="red">3. dog</font></li>
   </ul>
-  3대 hhb, 부모 ul li와 ol
-
-  <h2>생활코딩cording</h2>
-생활코딩 유튜브 강의를 통해 코딩 공부 시작했습니다. <br><strong>꾸준하고 열심히 좋은 결과가 따를 수 있도록 <u>파이팅</u></strong>
+    3대 hhb, 부모 ul li와 ol-->
+  <div id="article">
+  <h2>생활코딩 cording</h2>
+<u>생활코딩 유튜브 강의</u>를 통해 코딩 공부 시작했습니다. <br><strong>꾸준하고 열심히 좋은 결과가 따를 수 있도록 <u>파이팅</u></strong>
 <p>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/7T7r_oSp0SE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
@@ -61,6 +104,8 @@
     <br>
       <img src="Arirang.jpg" width="250">
     <p><strong>style margin-top npx 테스트용</strong></p><p style="margin-top:20px">아리랑의 유래는 삼국시대에 이미 형성되었다는 설, 대원군이 경복궁의 중건공사를 시작한 1870년 즈음 형성되었다는 설, 정확한 시기는 모르나 밀양의 영남루에 얽힌 아랑(阿女良)의 전설에서 유래하였다는 등 크게 세 가지 설로 나뉜다.</p>
+  </div>
+</div>
     <p>
       <div id="disqus_thread"></div>
       <script>
