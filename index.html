@@ -3,61 +3,8 @@
 <head>
   <title>코딩 따라잡기 - 아리랑의 유래</title>
   <meta charset="utf-8">
-  <style>
-    body {
-      margin: 0;
-      background-color: lightgreen;
-    }
-    a {
-      color: black;
-      text-decoration: none;
-    }
-    #active {
-      color:red;
-    }
-    .saw {
-      color:gray;
-    }
-    h1 {
-      font-size: 45px;
-      text-align: center;
-      border-bottom: 1px solid black;
-      margin: 0;
-      padding: 20px;
-      padding-left: 38px;
-    }
-    #grid ol{
-      border-right: 1px solid red;
-      width: 120px;
-      margin: 0;
-      padding: 33px;
-    }
-    #grid {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      background-color: lightblue;
-    }
-    #article #grid {
-      margin: 0;
-      padding: 5px;
-    }
-    @media(max-width: 800px){
-      #grid, ol {
-        background-color: white;
-      }
-      #grid{
-        display: block;
-        padding: 10px;
-      }
-      #grid ol{
-        border-right: none;
-      }
-      h1{
-        border-bottom: none;
-      }
-    }
-  </style>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <link rel="stylesheet" href="style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSH0RB0L5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -69,14 +16,14 @@
 </head>
 <body>
   <h1><a href="index.html">아리랑</a></h1>
-  <!--이 메인 아리랑만 한 칸 앞인데 이유를 모르겠음-->
+  <!--이 메인 아리랑만 한 칸 앞인데 이유를 모르겠음 style center일 때 틀어짐-->
   <div id="grid">
   <ol>
     <li><a href="1.html" class="saw">위키피디아</a></li>
     <li><a href="2.html" class="saw" id="active">한국민족대백과</a></li>
     <li><a href="3.html" class="saw">문화콘텐츠닷컴</a></li>
     </ol>
-  <!--
+  <!-- ol은 앞줄이 사라지더라도 알아서 재배열? 재배치?
   <h1><a href="index.html"><font color="black">아리랑</font></a></h1>
   <ol>
     <li><a href="1.html"><font color="black">위키피디아</font></a></li>
